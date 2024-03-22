@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EventManagerSO
   m_EditorClassIdentifier: 
   event1: 1
-  event2: 1
-  event3: 1
+  event2: 0
+  event3: 0

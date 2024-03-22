@@ -10,15 +10,21 @@ public class GameManager : MonoBehaviour
     public GameObject event3;
     void Start()
     {
-        
+        //Setting Events False on Awaken
+        EventManagerSO.event1 = false;
+        EventManagerSO.event2 = false;
+        EventManagerSO.event3 = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Checking to see if each event is set to true, at which point sequence begins
         if (EventManagerSO.event1)
         {
+            //Debug.Log("Setting Active Event 1");
             event1.SetActive(true);
+            //EventManagerSO.event1 = false;
         }
         if (EventManagerSO.event2)
         {
