@@ -36,7 +36,10 @@ public class GameManager : MonoBehaviour
     private void ResetScene()
     {
         EventManagerSO.event1 = false;
+        event1.SetActive(false);
         EventManagerSO.event2 = false;
+        event2.SetActive(false);
         EventManagerSO.event3 = false;
+        event3.SetActive(false);
     }
 }
