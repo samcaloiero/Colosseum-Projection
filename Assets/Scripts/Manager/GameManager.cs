@@ -10,10 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject event3;
     void Start()
     {
-        //Setting Events False on Awaken
-        EventManagerSO.event1 = false;
-        EventManagerSO.event2 = false;
-        EventManagerSO.event3 = false;
+        ResetScene();
     }
 
     // Update is called once per frame
@@ -34,5 +31,12 @@ public class GameManager : MonoBehaviour
         {
             event3.SetActive(true);
         }
+    }
+
+    private void ResetScene()
+    {
+        EventManagerSO.event1 = false;
+        EventManagerSO.event2 = false;
+        EventManagerSO.event3 = false;
     }
 }

@@ -10,26 +10,26 @@ public class InputManager : MonoBehaviour
     //Put this on Manager Empty
     void Update()
     {   //Checking for First Event Key
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             Debug.Log("1 Pressed");
            EventManagerSO.event1 = true;
         }
         //Checking for Second Event Key
-        if (Input.GetKeyDown(KeyCode.Keypad2))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("2 Pressed");
             EventManagerSO.event2 =true;
         }
         //Checking for Third Event Key
-        if (Input.GetKeyDown(KeyCode.Keypad3))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             Debug.Log("3 Pressed");
             EventManagerSO.event3 = true;
         }
     }
 
-
+    //Code to decide fate of "downed" gladiator
     private void LiveOrDie()
     {
         
