@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour
 {
     //Getting access to the EventManagerSO
     public EventManagerSO EventManagerSO;
-
+    // All lettes used: oupai
     //Put this on Manager Empty
     void Update()
     {   //Checking for First Event Key
@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
             Debug.Log("1 Pressed");
            EventManagerSO.event1 = true;
         }
-        //Checking for Second Event Key
+        //Checking for Second Event Keya
         if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("2 Pressed");
