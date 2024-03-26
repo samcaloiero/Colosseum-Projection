@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     //Getting access to the EventManagerSO
     public EventManagerSO EventManagerSO;
     // All lettes used: oupai
+    //UIOPA
+    //(1,2,3,Lpa,R) in order
     //Put this on Manager Empty
     void Update()
     {   //Checking for First Event Key
@@ -15,18 +17,43 @@ public class InputManager : MonoBehaviour
             Debug.Log("1 Pressed");
            EventManagerSO.event1 = true;
         }
-        //Checking for Second Event Keya
-        if (Input.GetKeyDown(KeyCode.I))
+
+        if (EventManagerSO.event1)
         {
-            Debug.Log("2 Pressed");
-            EventManagerSO.event2 =true;
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                Debug.Log("2 Pressed");
+                EventManagerSO.event2 =true;
+            }  
         }
-        //Checking for Third Event Key
-        if (Input.GetKeyDown(KeyCode.O))
+
+        if (EventManagerSO.event2)
         {
-            Debug.Log("3 Pressed");
-            EventManagerSO.event3 = true;
+            //Checking for Third Event Key
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                Debug.Log("3 Pressed");
+                EventManagerSO.event3 = true;
+            } 
         }
+        if (EventManagerSO.event3)
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                Debug.Log("3 Pressed");
+                EventManagerSO.live = true;
+                //This is so user can't click both options
+                EventManagerSO.event3 = false;
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Debug.Log("3 Pressed");
+                EventManagerSO.die = true;
+                //This is so user can't click both options
+                EventManagerSO.event3 = false;
+            } 
+        }
+        
     }
 
     //Code to decide fate of "downed" gladiator
