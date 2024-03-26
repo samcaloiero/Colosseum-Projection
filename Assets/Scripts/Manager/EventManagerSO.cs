@@ -7,4 +7,6 @@ public class EventManagerSO : ScriptableObject
     public bool event1;
     public bool event2;
     public bool event3;
+    public bool live;
+    public bool die;
 }
